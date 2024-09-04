@@ -14,17 +14,9 @@ import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
+import porfolioImage1 from '../images/portfolio/portfolio-1.png';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
+import porfolioImage3 from '../images/portfolio/portfolio-3.png';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -44,8 +36,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Yihan Huang - Portfolio',
+  description: "My Journey in Tech: Adventures of Yihan Huang",
 };
 
 /**
@@ -69,24 +61,18 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Yihan Huang.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
-      </p>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        I'm a Melbourne Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently studying
+        at <strong className="text-stone-100">Monash University</strong>.
       </p>
     </>
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
+      href: 'https://drive.google.com/file/d/1yip_GCtsXyFd67im3ejoM32kEZy2fzvL/view?usp=sharing',
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
@@ -104,16 +90,14 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `I'm Yihan Huang, a second-year Master of Information Technology student with a strong interest in software development and cloud computing. I'm passionate about problem-solving and continuously learning new skills to stay at the forefront of technology.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Melbourne, Victoria', Icon: MapIcon},
+    {label: 'Age', text: '26', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'Chinese', Icon: FlagIcon},
+    {label: 'Interests', text: 'Squash, Bouldering, Hiking', Icon: SparklesIcon},
+    {label: 'Study', text: 'Monash University', Icon: AcademicCapIcon},
+    // {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
   ],
 };
 
@@ -122,27 +106,10 @@ export const aboutData: About = {
  */
 export const skills: SkillGroup[] = [
   {
-    name: 'Spoken languages',
-    skills: [
-      {
-        name: 'English',
-        level: 10,
-      },
-      {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
-      },
-    ],
-  },
-  {
     name: 'Frontend development',
     skills: [
       {
-        name: 'React',
+        name: 'JavaScript',
         level: 9,
       },
       {
@@ -150,8 +117,24 @@ export const skills: SkillGroup[] = [
         level: 7,
       },
       {
+        name: 'Webpack',
+        level: 6,
+      },
+      {
+        name: 'Vue',
+        level: 9,
+      },
+      {
+        name: 'React',
+        level: 7,
+      },
+      {
         name: 'GraphQL',
         level: 6,
+      },
+      {
+        name: 'Tailwind',
+        level: 8,
       },
     ],
   },
@@ -160,33 +143,33 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'Node.js',
+        level: 7,
+      },
+      {
+        name: 'Python',
         level: 8,
       },
       {
-        name: 'Rust',
-        level: 5,
+        name: 'Java',
+        level: 7,
       },
       {
-        name: 'Golang',
-        level: 4,
+        name: 'SQL',
+        level: 6,
       },
+      {name: 'Cloud Computing', level: 8},
+      {name: 'Docker', level: 6},
+      {name: 'Kubernetes', level: 6},
+      {name: 'AWS', level: 8},
     ],
   },
   {
     name: 'Mobile development',
     skills: [
       {
-        name: 'React Native',
-        level: 9,
-      },
-      {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
-      },
+        name: 'Kotlin',
+        level: 7,
+      }
     ],
   },
 ];
@@ -196,9 +179,9 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Skin MBTI',
+    description: 'A web app that allows users to determine their skin type and receive personalized skin care recommendations and communicate with others with similar skin types.',
+    url: 'https://github.com/y1hanh/Skin-type-detection-recommendation-front-end',
     image: porfolioImage1,
   },
   {
@@ -212,55 +195,8 @@ export const portfolioItems: PortfolioItem[] = [
     description: 'Give a short description of your project here.',
     url: 'https://reactresume.com',
     image: porfolioImage3,
-  },
-  {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage4,
-  },
-  {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage5,
-  },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
-  },
+  }
+ 
 ];
 
 /**
@@ -268,40 +204,56 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
-  {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
+    date: 'July 2023 - June 2025(expected)',
+    location: 'Monash University',
+    title: 'Master of Information Technology',
+    content: <p>•	WAM: 81 | GPA: 3.6/4.0.</p>,
+  }
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'August 2024',
+    location: 'Skin MBTI, FoundersHack Hackathon',
+    title: 'Front End Development',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+      <ul>
+        <li>•	Engineered a web application for skin type identification utilizing Machine Learning, Python Flask, and Vue3.</li>
+        <li>•	Spearheaded front-end development and conducted rigorous testing to ensure flawless code integration.</li>
+      </ul>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'May 2024',
+    location: 'Image Detection Application, Cloud Computing Class Assignment',
+    title: 'Full Stack Development',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+      <ul>
+        <li>•	Led the development of an online image tagging system, deploying AWS Lambda and API Gateway for seamless cloud functionality.</li>
+        <li>•	Directed the front-end architecture and managed cloud deployment to optimize system performance.</li>
+      </ul>
+    ),
+  },
+  {
+    date: 'March 2024 - Ongoing',
+    location: 'Monash Squash Club, Monash University',
+    title: 'Committee Member',
+    content: (
+      <ul>
+        <li>•	Organize and manage social events, fostering a vibrant and engaged community within the club.</li>
+        <li>•	Provide strategic support during pennant finals, ensuring smooth operations and team coordination.</li>
+      </ul>
+    ),
+  },
+  {
+    date: 'March 2022 - December 2022',
+    location: 'Bilibili',
+    title: 'Software Engineer Intern, Platform Technology',
+    content: (
+      <ul> <li>•  Crafted and customized user interface components using JavaScript, TypeScript, Webpack, and Vue3, enhancing the platform's user experience. </li>
+      <li>•  Enhanced front-end performance, achieving a 20% reduction in page load times through optimized coding and asset management strategies.</li>
+      <li>•  Collaborated with cross-functional teams to diagnose and resolve complex issues, ensuring robust and reliable platform operations.</li>
+      </ul>
     ),
   },
 ];
@@ -340,23 +292,23 @@ export const contact: ContactSection = {
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'huangehan@gmail.com',
+      href: 'mailto:huangehan@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'Melbourne, Victoria',
+      href: 'https://maps.app.goo.gl/T2nkPyA3z2qCEu8CA',
     },
-    {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
-    },
+    // {
+    //   type: ContactType.Instagram,
+    //   text: '@y1hanh',
+    //   href: 'https://github.com/y1hanh',
+    // },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: '@y1hanh',
+      href: 'https://github.com/y1hanh',
     },
   ],
 };
