@@ -33,11 +33,11 @@ const Header: FC = memo(() => {
 const DesktopNav: FC<{navSections: SectionId[]; currentSection: SectionId | null}> = memo(
   ({navSections, currentSection}) => {
     const baseClass =
-      '-m-1.5 p-1.5 rounded-md font-bold first-letter:uppercase hover:transition-colors hover:duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 sm:hover:text-orange-500 text-neutral-100';
-    const activeClass = classNames(baseClass, 'text-orange-500');
+      '-m-1.5 p-1.5 rounded-md font-bold first-letter:uppercase hover:transition-colors hover:duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-400 sm:hover:text-stone-400 text-neutral-100';
+    const activeClass = classNames(baseClass, 'text-stone-400');
     const inactiveClass = classNames(baseClass, 'text-neutral-100');
     return (
-      <header className="fixed top-0 z-50 hidden w-full bg-neutral-900/50 p-4 backdrop-blur sm:block" id={headerID}>
+      <header className="fixed top-0 z-50 hidden w-full bg-orange-200/50 p-4 backdrop-blur sm:block" id={headerID}>
         <nav className="flex justify-center gap-x-8">
           {navSections.map(section => (
             <NavItem
@@ -95,7 +95,7 @@ const MobileNav: FC<{navSections: SectionId[]; currentSection: SectionId | null}
               leave="transition ease-in-out duration-300 transform"
               leaveFrom="translate-x-0"
               leaveTo="-translate-x-full">
-              <div className="relative w-4/5 bg-stone-800">
+              <div className="relative w-4/5 bg-orange-200">
                 <nav className="mt-5 flex flex-col gap-y-2 px-2">
                   {navSections.map(section => (
                     <NavItem

@@ -1,21 +1,14 @@
 import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
-  // BuildingOffice2Icon,
-  CalendarIcon,
-  FlagIcon,
   MapIcon,
   SparklesIcon,
 } from '@heroicons/react/24/outline';
-
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
 import porfolioImage1 from '../images/portfolio/portfolio-1.png';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
+import porfolioImage2 from '../images/portfolio/portfolio-2.png';
 import porfolioImage3 from '../images/portfolio/portfolio-3.png';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
@@ -93,8 +86,6 @@ export const aboutData: About = {
   description: `I'm Yihan Huang, a second-year Master of Information Technology student with a strong interest in software development and cloud computing. I'm passionate about problem-solving and continuously learning new skills to stay at the forefront of technology.`,
   aboutItems: [
     {label: 'Location', text: 'Melbourne, Victoria', Icon: MapIcon},
-    {label: 'Age', text: '26', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Chinese', Icon: FlagIcon},
     {label: 'Interests', text: 'Squash, Bouldering, Hiking', Icon: SparklesIcon},
     {label: 'Study', text: 'Monash University', Icon: AcademicCapIcon},
     // {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
@@ -180,20 +171,20 @@ export const skills: SkillGroup[] = [
 export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Skin MBTI',
-    description: 'A web app that allows users to determine their skin type and receive personalized skin care recommendations and communicate with others with similar skin types.',
-    url: 'https://github.com/y1hanh/Skin-type-detection-recommendation-front-end',
+    description: 'A web app that allows users to determine their skin type and receive personalized skin care recommendations and communicate with others with similar skin types. Stack: Vue3, Flask',
+    url: 'https://devpost.com/software/skin-mbti?ref_content=user-portfolio&ref_feature=in_progress',
     image: porfolioImage1,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'We Hear You',
+    description: 'A Personal project that focuses on people who are experiencing mental health issues and want to find a place to talk to others. Stack: Vue3, Firebase, Bootstrap, JavaScript',
+    url: 'https://github.com/y1hanh/WeHearYou',
     image: porfolioImage2,
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Luna Log',
+    description: 'A android app that allows users to track and predict their period and ovulation cycle. Stack: Android Studio, Kotlin',
+    url: 'https://github.com/y1hanh/LunaLog',
     image: porfolioImage3,
   }
  
@@ -288,7 +279,7 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: 'Let\'s connect and explore opportunities to work together!',
   items: [
     {
       type: ContactType.Email,
@@ -300,11 +291,6 @@ export const contact: ContactSection = {
       text: 'Melbourne, Victoria',
       href: 'https://maps.app.goo.gl/T2nkPyA3z2qCEu8CA',
     },
-    // {
-    //   type: ContactType.Instagram,
-    //   text: '@y1hanh',
-    //   href: 'https://github.com/y1hanh',
-    // },
     {
       type: ContactType.Github,
       text: '@y1hanh',
@@ -317,9 +303,6 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/y1hanh'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/yihan-huang-10963a238/'},
 ];

@@ -7,6 +7,7 @@ interface FormData {
 }
 
 const ContactForm: FC = memo(() => {
+  const [showModal, setShowModal] = useState(false);
   const defaultData = useMemo(
     () => ({
       name: '',
@@ -29,30 +30,40 @@ const ContactForm: FC = memo(() => {
     [data],
   );
 
-  const handleSendMessage = useCallback(
-    async (event: React.FormEvent<HTMLFormElement>) => {
-      event.preventDefault();
-      /**
-       * This is a good starting point to wire up your form submission logic
-       * */
-      console.log('Data to send: ', data);
-    },
-    [data],
-  );
+  const handleSendMessage = () => {
+    setShowModal(true);
+  }
 
   const inputClasses =
     'bg-neutral-700 border-0 focus:border-0 focus:outline-none focus:ring-1 focus:ring-orange-600 rounded-md placeholder:text-neutral-400 placeholder:text-sm text-neutral-200 text-sm';
 
-  return (
-    <form className="grid min-h-[320px] grid-cols-1 gap-y-4" method="POST" onSubmit={handleSendMessage}>
-      <input className={inputClasses} name="name" onChange={onChange} placeholder="Name" required type="text" />
+  if (showModal) {
+    return (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-8 rounded-lg shadow-lg">
+            <h2 className="text-2xl font-bold mb-4">Feature not available yet</h2>
+            <p className="text-gray-700">I am still working on this feature. Please contact me via email  
+              <a href="mailto:huangehan@gmail.com" className="text-blue-500" target="_blank"> huangehan@gmail.com</a> instead.</p>
+            <button
+              onClick={() => setShowModal(false)}
+              className="mt-6 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+    );
+  } else {
+    return (
+      <form className="grid min-h-[320px] grid-cols-1 gap-y-4" method="POST" onSubmit={handleSendMessage}>
+      <input className={inputClasses} name="name" onChange={onChange} placeholder="Name" type="text" />
       <input
         autoComplete="email"
         className={inputClasses}
         name="email"
         onChange={onChange}
         placeholder="Email"
-        required
+        // required
         type="email"
       />
       <textarea
@@ -61,7 +72,7 @@ const ContactForm: FC = memo(() => {
         name="message"
         onChange={onChange}
         placeholder="Message"
-        required
+        // required
         rows={6}
       />
       <button
@@ -71,7 +82,7 @@ const ContactForm: FC = memo(() => {
         Send Message
       </button>
     </form>
-  );
+  )};
 });
 
 ContactForm.displayName = 'ContactForm';
