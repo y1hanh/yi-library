@@ -12,6 +12,8 @@ import TwitterIcon from '../../Icon/TwitterIcon';
 import Section from '../../Layout/Section';
 import ContactForm from './ContactForm';
 
+import {motion} from 'framer-motion';
+
 const ContactValueMap: Record<ContactType, ContactValue> = {
   [ContactType.Email]: {Icon: EnvelopeIcon, srLabel: 'Email'},
   [ContactType.Phone]: {Icon: DevicePhoneMobileIcon, srLabel: 'Phone'},
@@ -26,10 +28,27 @@ const ContactValueMap: Record<ContactType, ContactValue> = {
 const Contact: FC = memo(() => {
   const {headerText, description, items} = contact;
   return (
-    <Section className="bg-neutral-800" sectionId={SectionId.Contact}>
+    <Section className=" bg-[#333ca8]" sectionId={SectionId.Contact}>
       <div className="flex flex-col gap-y-6">
         <div className="flex flex-col gap-6 md:flex-row md:items-center">
-          <EnvelopeIcon className="hidden h-16 w-16 text-white md:block" />
+
+        <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 360, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    repeat: Infinity,
+    repeatType: "mirror",
+    repeatDelay: 0.4,
+  }}
+>
+<EnvelopeIcon className="hidden h-16 w-16 text-white md:block" />
+</motion.div>
+          
+
+          
           <h2 className="text-2xl font-bold text-white">{headerText}</h2>
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">

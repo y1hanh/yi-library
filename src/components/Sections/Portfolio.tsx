@@ -11,7 +11,7 @@ import { Scroll } from './Scroll';
 
 const Portfolio: FC = memo(() => {
   return (
-    <Section className="bg-neutral-700" sectionId={SectionId.Portfolio}>
+    <Section className="bg-[#676599]" sectionId={SectionId.Portfolio}>
       <div className="flex flex-col gap-y-8">
         <h2 className="self-center text-xl font-bold text-white">Check out some of my work</h2>
         <div className="scroll-container">

@@ -35,11 +35,11 @@ const ContactForm: FC = memo(() => {
   }
 
   const inputClasses =
-    'bg-neutral-700 border-0 focus:border-0 focus:outline-none focus:ring-1 focus:ring-fuchsia-600 rounded-md placeholder:text-neutral-400 placeholder:text-sm text-neutral-200 text-sm';
+    'bg-[#30347a] border-0 focus:border-0 focus:outline-none focus:ring-1 focus:ring-pink-600 rounded-md placeholder:text-neutral-400 placeholder:text-sm text-neutral-200 text-sm';
 
   if (showModal) {
     return (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <div className="fixed inset-0 flex items-center justify-center bg-[#a8a3c2] bg-opacity-50">
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h2 className="text-2xl font-bold mb-4">Feature not available yet</h2>
             <p className="text-gray-700">I am still working on this feature. Please contact me via email  
@@ -77,7 +77,7 @@ const ContactForm: FC = memo(() => {
       />
       <button
         aria-label="Submit contact form"
-        className="w-max rounded-full border-2 border-fuchsia-600 bg-stone-900 px-4 py-2 text-sm font-medium text-white shadow-md outline-none hover:bg-stone-800 focus:ring-2 focus:ring-fuchsia-600 focus:ring-offset-2 focus:ring-offset-stone-800"
+        className="w-max rounded-full border-2 border-pink-200 bg-[#30347a] px-4 py-2 text-sm font-medium text-white shadow-md outline-none hover:bg-[#676599] focus:ring-2 focus:ring-pink-600 focus:ring-offset-2 focus:ring-offset-stone-800"
         type="submit">
         Send Message
       </button>

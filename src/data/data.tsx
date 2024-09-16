@@ -6,7 +6,7 @@ import {
 } from '@heroicons/react/24/outline';
 import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import heroImage from '../images/header-background.webp';
+import heroImage from '../images/header-background.png';
 // import porfolioImage1 from '../images/portfolio/portfolio-1.png';
 // import porfolioImage2 from '../images/portfolio/portfolio-2.png';
 // import porfolioImage3 from '../images/portfolio/portfolio-3.png';
@@ -101,31 +101,27 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'JavaScript',
-        level: 9,
+        level: 7,
       },
       {
         name: 'Typescript',
-        level: 7,
+        level: 5,
       },
       {
         name: 'Webpack',
-        level: 6,
+        level: 5,
       },
       {
         name: 'Vue',
-        level: 9,
-      },
-      {
-        name: 'React',
         level: 7,
       },
       {
-        name: 'GraphQL',
+        name: 'React',
         level: 6,
       },
       {
         name: 'Tailwind',
-        level: 8,
+        level: 7,
       },
     ],
   },
@@ -138,20 +134,20 @@ export const skills: SkillGroup[] = [
       },
       {
         name: 'Python',
-        level: 8,
+        level: 7,
       },
       {
         name: 'Java',
-        level: 7,
+        level: 6,
       },
       {
         name: 'SQL',
         level: 6,
       },
-      {name: 'Cloud Computing', level: 8},
-      {name: 'Docker', level: 6},
-      {name: 'Kubernetes', level: 6},
-      {name: 'AWS', level: 8},
+      {name: 'Cloud Computing', level: 6},
+      {name: 'Docker', level: 5},
+      {name: 'Kubernetes', level: 5},
+      {name: 'AWS', level: 7},
     ],
   },
   {
@@ -159,7 +155,7 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'Kotlin',
-        level: 7,
+        level: 6,
       }
     ],
   },

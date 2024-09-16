@@ -10,7 +10,7 @@ import {motion} from 'framer-motion';
 const About: FC = memo(() => {
   const {profileImageSrc, description, aboutItems} = aboutData;
   return (
-    <Section className="bg-neutral-700" sectionId={SectionId.About}>
+    <Section className="bg-[#333ca8]" sectionId={SectionId.About}>
         <motion.div
             className="box"
             initial={{ opacity: 0.2, scale: 0.5 }}

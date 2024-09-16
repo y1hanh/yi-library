@@ -1,10 +1,10 @@
-import {useRef, FC, useEffect, useState} from 'react';
-import {AnimatePresence, motion, useScroll} from 'framer-motion';
+import {useRef, FC, useEffect, useState, memo} from 'react';
+import {AnimatePresence, motion} from 'framer-motion';
 import {PortfolioItem} from '../../data/dataDef';
 import {isMobile} from '../../config';
 import useDetectOutsideClick from '../../hooks/useDetectOutsideClick';
 
-export const Scroll: FC<{item: PortfolioItem[]}> = ({item}) => {
+export const Scroll: FC<{item: PortfolioItem[]}> = memo(({item}) => {
   const ref = useRef(null);
   const linkRef = useRef(null);
   // const { scrollXProgress } = useScroll({ container: ref });
@@ -74,4 +74,4 @@ export const Scroll: FC<{item: PortfolioItem[]}> = ({item}) => {
       </AnimatePresence>
     </>
   );
-};
+});
