@@ -7,9 +7,9 @@ import {
 import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import heroImage from '../images/header-background.webp';
-import porfolioImage1 from '../images/portfolio/portfolio-1.png';
-import porfolioImage2 from '../images/portfolio/portfolio-2.png';
-import porfolioImage3 from '../images/portfolio/portfolio-3.png';
+// import porfolioImage1 from '../images/portfolio/portfolio-1.png';
+// import porfolioImage2 from '../images/portfolio/portfolio-2.png';
+// import porfolioImage3 from '../images/portfolio/portfolio-3.png';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -57,10 +57,10 @@ export const heroData: Hero = {
   name: `I'm Yihan Huang.`,
   description: (
     <>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Melbourne Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently studying
+    <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+      I'm a Melbourne Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently studying
         at <strong className="text-stone-100">Monash University</strong>.
-      </p>
+    </p>
     </>
   ),
   actions: [
@@ -173,19 +173,19 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'Skin MBTI',
     description: 'A web app that allows users to determine their skin type and receive personalized skin care recommendations and communicate with others with similar skin types. Stack: Vue3, Flask',
     url: 'https://devpost.com/software/skin-mbti?ref_content=user-portfolio&ref_feature=in_progress',
-    image: porfolioImage1,
+    image: 'https://images-portfolio-web.s3.ap-southeast-2.amazonaws.com/portfolio-1.png',
   },
   {
     title: 'We Hear You',
     description: 'A Personal project that focuses on people who are experiencing mental health issues and want to find a place to talk to others. Stack: Vue3, Firebase, Bootstrap, JavaScript',
     url: 'https://github.com/y1hanh/WeHearYou',
-    image: porfolioImage2,
+    image: 'https://images-portfolio-web.s3.ap-southeast-2.amazonaws.com/portfolio-2.png',
   },
   {
     title: 'Luna Log',
     description: 'A android app that allows users to track and predict their period and ovulation cycle. Stack: Android Studio, Kotlin',
     url: 'https://github.com/y1hanh/LunaLog',
-    image: porfolioImage3,
+    image: 'https://images-portfolio-web.s3.ap-southeast-2.amazonaws.com/portfolio-3.png',
   }
  
 ];
