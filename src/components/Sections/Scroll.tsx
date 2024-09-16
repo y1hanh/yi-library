@@ -1,13 +1,13 @@
-import { useRef, FC, useEffect, useState } from "react";
-import { AnimatePresence, motion, useScroll } from "framer-motion";
-import { PortfolioItem } from "../../data/dataDef";
+import {useRef, FC, useEffect, useState} from 'react';
+import {AnimatePresence, motion, useScroll} from 'framer-motion';
+import {PortfolioItem} from '../../data/dataDef';
 import {isMobile} from '../../config';
-import useDetectOutsideClick from "../../hooks/useDetectOutsideClick";
+import useDetectOutsideClick from '../../hooks/useDetectOutsideClick';
 
 export const Scroll: FC<{item: PortfolioItem[]}> = ({item}) => {
   const ref = useRef(null);
   const linkRef = useRef(null);
-  const { scrollXProgress } = useScroll({ container: ref });
+  // const { scrollXProgress } = useScroll({ container: ref });
   const [mobile, setMobile] = useState(false);
   const [selectedId, setSelectedId] = useState<number | null>(null);
 
@@ -22,7 +22,7 @@ export const Scroll: FC<{item: PortfolioItem[]}> = ({item}) => {
 
   const handleClick = (url: string) => {
     window.open(url, '_blank');
-  }
+  };
 
   return (
     <>
@@ -41,7 +41,7 @@ export const Scroll: FC<{item: PortfolioItem[]}> = ({item}) => {
         {item.map((i, index) => (
           <li key={i.title}>
             <motion.div layoutId={index.toString()} onClick={() => setSelectedId(index)}>
-            <img src={i.image} alt={i.title} />
+              <img src={i.image} alt={i.title} />
             </motion.div>
           </li>
         ))}
@@ -50,24 +50,28 @@ export const Scroll: FC<{item: PortfolioItem[]}> = ({item}) => {
       </ul>
 
       <AnimatePresence>
-      {selectedId !== null && (
-        <motion.div layoutId={selectedId.toString()} className="selected-modal" ref={linkRef}>
-          <img 
-            className="md:w-auto object-cover" 
-            src={item[selectedId].image} 
-            alt={item[selectedId].title} 
-            onClick={() => handleClick(item[selectedId].url)}
-          />
-          <div>
-            <div className="flex flex-col gap-y-4 w-full ml-2">
-            <h1 className="font-mono text-xl">{item[selectedId].title}</h1>
-            <p className="font-mono">{item[selectedId].description}</p>
+        {selectedId !== null && (
+          <motion.div layoutId={selectedId.toString()} className="selected-modal" ref={linkRef}>
+            <img
+              className="md:w-auto object-cover"
+              src={item[selectedId].image}
+              alt={item[selectedId].title}
+              onClick={() => handleClick(item[selectedId].url)}
+            />
+            <div>
+              <div className="flex flex-col gap-y-4 w-full ml-2">
+                <h1 className="font-mono text-xl">{item[selectedId].title}</h1>
+                <p className="font-mono">{item[selectedId].description}</p>
+              </div>
+              <motion.button
+                onClick={() => setSelectedId(null)}
+                className="fixed top-0 right-0 text-2xl h-5 w-5 bg-transparent sm:h-6 sm:w-6">
+                X
+              </motion.button>
             </div>
-            <motion.button onClick={() => setSelectedId(null)} className="fixed top-0 right-0 text-2xl h-5 w-5 bg-transparent sm:h-6 sm:w-6" >X</motion.button>
-          </div>
-        </motion.div>
+          </motion.div>
         )}
       </AnimatePresence>
     </>
   );
-}
+};
