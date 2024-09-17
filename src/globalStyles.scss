@@ -125,17 +125,29 @@ th {
 
   .selected-modal{
     padding: 20px ;
-    display: flex;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) !important;
-    width: auto;
+    width: 70%;
     height: 50vh;
     border-radius: 10px;
     border: 1px solid #000;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.894);
     z-index: 1000;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   }
+}
+
+.typewriter {
+  color: white;
+  font-size: 1rem;
+}
+
+.hero-type { 
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  text-align: center;
 }

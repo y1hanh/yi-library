@@ -10,7 +10,7 @@ import heroImage from '../images/header-background.png';
 // import porfolioImage1 from '../images/portfolio/portfolio-1.png';
 // import porfolioImage2 from '../images/portfolio/portfolio-2.png';
 // import porfolioImage3 from '../images/portfolio/portfolio-3.png';
-import profilepic from '../images/profilepic.jpg';
+import profilepic from '../images/profilepic.png';
 import testimonialImage from '../images/testimonial.webp';
 import {
   About,
@@ -55,14 +55,9 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
 export const heroData: Hero = {
   imageSrc: heroImage,
   name: `I'm Yihan Huang.`,
-  description: (
-    <>
-    <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-      I'm a Melbourne Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently studying
-        at <strong className="text-stone-100">Monash University</strong>.
-    </p>
-    </>
-  ),
+  description: "Hello! I'm Yihan Huang! " +
+  "A second-year Master of Information Technology student," +
+    "With a strong interest in software development and cloud computing.",
   actions: [
     {
       href: 'https://drive.google.com/file/d/1yip_GCtsXyFd67im3ejoM32kEZy2fzvL/view?usp=sharing',
@@ -83,7 +78,9 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `I'm Yihan Huang, a second-year Master of Information Technology student with a strong interest in software development and cloud computing. I'm passionate about problem-solving and continuously learning new skills to stay at the forefront of technology.`,
+  description: "Hello! I'm Yihan Huang!"+
+  "a second-year Master of Information Technology student, " +
+    "with a strong interest in software development and cloud computing.",
   aboutItems: [
     {label: 'Location', text: 'Melbourne, Victoria', Icon: MapIcon},
     {label: 'Interests', text: 'Squash, Bouldering, Hiking', Icon: SparklesIcon},

@@ -1,7 +1,7 @@
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import classNames from 'classnames';
 import Image from 'next/image';
-import { FC, memo } from 'react';
+import { FC, memo,useState, useRef, useEffect } from 'react';
 
 import { heroData, SectionId } from '../../data/data';
 import Section from '../Layout/Section';
@@ -9,9 +9,25 @@ import Socials from '../Socials';
 
 const Hero: FC = memo(() => {
   const { imageSrc, name, description, actions } = heroData;
+  const [typewriteStart, setTypewriteStart] = useState(0);
+  const typeWriterRef = useRef(null);
+
+  useEffect(() => {
+    const timer = setTimeout(()=>{
+    if (typewriteStart < description.length) {
+      if (typeWriterRef.current) {
+        (typeWriterRef.current as HTMLElement).innerText += description[typewriteStart];
+      }
+      setTypewriteStart(typewriteStart + 1);
+    }}, 100);
+
+      return () => clearTimeout(timer);
+  }, [typewriteStart, description]);
+
   return (
     <Section noPadding sectionId={SectionId.Hero}>
       <div className="relative flex h-full items-center justify-center ">
+
         <Image
           alt={`${name}-image`}
           className="h-auto object-cover"
@@ -19,7 +35,7 @@ const Hero: FC = memo(() => {
           priority
           src={imageSrc}
         />
-
+        <div className='hero-type absolute text-pretty inset-0 flex items-center md:text-3xl text-sm font-bold sm:w-2/5 md:w-3/5 ' ref={typeWriterRef}></div>
         {/* <div className="z-10  max-w-screen-lg px-4 lg:px-0 mt-14 mb-14">
           <div className="flex flex-col items-center gap-y-3 rounded-xl bg-gray-800/40 p-6 text-center shadow-lg backdrop-blur-sm">
             <h3 className="text-xl font-bold text-white sm:text-xl lg:text-3xl">{name}</h3>
