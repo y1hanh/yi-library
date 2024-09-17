@@ -59,10 +59,10 @@ export const Scroll: FC<{item: PortfolioItem[]}> = memo(({item}) => {
               alt={item[selectedId].title}
               onClick={() => handleClick(item[selectedId].url)}
             />
-            <div>
+            <div className='portfolio-text'>
               <div className="flex flex-col gap-y-4 w-full ml-2">
-                <h1 className="font-mono text-xl sm:text-sm">{item[selectedId].title}</h1>
-                <p className="font-mono sm:text-sm">{item[selectedId].description}</p>
+                <h1 className="font-mono md:text-lg sm:text-sm">{item[selectedId].title}</h1>
+                <p className="font-mono md:text-lg sm:text-sm">{item[selectedId].description}</p>
               </div>
               <motion.button
                 onClick={() => setSelectedId(null)}
