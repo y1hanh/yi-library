@@ -33,19 +33,19 @@ const Contact: FC = memo(() => {
         <div className="flex flex-col gap-6 md:flex-row md:items-center">
 
         <motion.div
-  initial={{ scale: 0 }}
-  animate={{ rotate: 360, scale: 1 }}
-  transition={{
-    type: "spring",
-    stiffness: 260,
-    damping: 20,
-    repeat: Infinity,
-    repeatType: "mirror",
-    repeatDelay: 0.4,
-  }}
->
-<EnvelopeIcon className="hidden h-16 w-16 text-white md:block" />
-</motion.div>
+          initial={{ scale: 0 }}
+          animate={{ rotate: 360, scale: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 260,
+            damping: 20,
+            repeat: Infinity,
+            repeatType: "mirror",
+            repeatDelay: 0.4,
+          }}
+        >
+      <EnvelopeIcon className="hidden h-16 w-16 text-white md:block" />
+      </motion.div>
           
 
           

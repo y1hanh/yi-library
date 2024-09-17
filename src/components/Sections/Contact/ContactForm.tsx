@@ -46,7 +46,7 @@ const ContactForm: FC = memo(() => {
               <a href="mailto:huangehan@gmail.com" className="text-blue-500" target="_blank"> huangehan@gmail.com</a> instead.</p>
             <button
               onClick={() => setShowModal(false)}
-              className="mt-6 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+              className="mt-6 bg-[#a8a3c2] text-white px-4 py-2 rounded hover:bg-blue-600"
             >
               Close
             </button>
