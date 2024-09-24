@@ -30,7 +30,7 @@ const Hero: FC = memo(() => {
 
         <Image
           alt={`${name}-image`}
-          className="h-auto object-cover"
+          className='min-w-full'
           placeholder="blur"
           priority
           src={imageSrc}
