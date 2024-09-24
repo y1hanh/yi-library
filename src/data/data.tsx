@@ -56,7 +56,7 @@ export const heroData: Hero = {
   imageSrc: heroImage,
   name: `I'm Yihan Huang.`,
   description: "Hello! I'm Yihan Huang! " +
-  "A second-year Master of Information Technology student," +
+  "A second-year Master of Information Technology student, " +
     "With a strong interest in software development and cloud computing.",
   actions: [
     {
@@ -197,28 +197,6 @@ export const education: TimelineItem[] = [
 
 export const experience: TimelineItem[] = [
   {
-    date: 'August 2024',
-    location: 'Skin MBTI, FoundersHack Hackathon',
-    title: 'Front End Development',
-    content: (
-      <ul>
-        <li>•	Engineered a web application for skin type identification utilizing Machine Learning, Python Flask, and Vue3.</li>
-        <li>•	Spearheaded front-end development and conducted rigorous testing to ensure flawless code integration.</li>
-      </ul>
-    ),
-  },
-  {
-    date: 'May 2024',
-    location: 'Image Detection Application, Cloud Computing Class Assignment',
-    title: 'Full Stack Development',
-    content: (
-      <ul>
-        <li>•	Led the development of an online image tagging system, deploying AWS Lambda and API Gateway for seamless cloud functionality.</li>
-        <li>•	Directed the front-end architecture and managed cloud deployment to optimize system performance.</li>
-      </ul>
-    ),
-  },
-  {
     date: 'March 2024 - Ongoing',
     location: 'Monash Squash Club, Monash University',
     title: 'Committee Member',
@@ -240,6 +218,31 @@ export const experience: TimelineItem[] = [
       </ul>
     ),
   },
+];
+
+export const project: TimelineItem[] = [
+  {
+    date: 'August 2024',
+    location: 'Skin MBTI, FoundersHack Hackathon',
+    title: 'Front End Development',
+    content: (
+      <ul>
+        <li>•	Engineered a web application for skin type identification utilizing Machine Learning, Python Flask, and Vue3.</li>
+        <li>•	Spearheaded front-end development and conducted rigorous testing to ensure flawless code integration.</li>
+      </ul>
+    ),
+  },
+  {
+    date: 'May 2024',
+    location: 'Image Detection Application, Cloud Computing Class Assignment',
+    title: 'Full Stack Development',
+    content: (
+      <ul>
+        <li>•	Led the development of an online image tagging system, deploying AWS Lambda and API Gateway for seamless cloud functionality.</li>
+        <li>•	Directed the front-end architecture and managed cloud deployment to optimize system performance.</li>
+      </ul>
+    ),
+  }
 ];
 
 /**
